@@ -12,7 +12,6 @@ This is an application library, which is used usually as a project library for p
 
 
 ## Fundamental functionality
-
 * The functionality is represented within this library by a class method called by an `Interuption Service Routine` (referred to as "ISR") usually in the main sketch at each change of a GPIO pin of a microcontroller sensing a tactile or touch switch.
 * The library processes the switch changes for detecting and evaluating `short and long presses`.
 * **The library does not recognize double presses.**
@@ -33,7 +32,6 @@ Internal parameters are hard-coded in the library usually as enumerations and ha
 <a id="dependency"></a>
 
 ## Dependency
-
 * **gbj\_appcore**: Parent library loaded from the file `gbj_appcore.h`.
 * **gbj\_serial\_debug**: Auxilliary library for debug serial output loaded from the file `gbj_serial_debug.h`. It enables to exclude serial outputs from final (production) compilation.
 
@@ -54,10 +52,9 @@ Internal parameters are hard-coded in the library usually as enumerations and ha
 <a id="constants"></a>
 
 ## Constants
+* **VERSION**: Name and semantic version of the library.
 
-* **gbj\_appbutton::VERSION**: Name and semantic version of the library.
-
-Other constants and enumerations are inherited from the parent library.
+Other constants, enumerations, result codes, and error codes are inherited from the parent library.
 
 
 <a id="interface"></a>
@@ -101,32 +98,21 @@ None
 ## Handlers
 
 #### Description
-The structure of pointers to handlers each for particular event in processing.
+Structure of pointers to handlers each for particular event in processing.
 * Individual or all handlers do not need to be defined in the main sketch, just those that are useful.
 
 #### Syntax
     struct Handlers
     {
-        Handler *onButtonIdle;
-        Handler *onButtonShort;
-        Handler *onButtonLong;
+      Handler *onButtonIdle;
+      Handler *onButtonShort;
+      Handler *onButtonLong;
     }
 
 #### Parameters
-
 * **onButtonIdle**: Pointer to a callback function, which is call at resetting the switch due to too long keeping it pressed.
-  * *Valid values*: system address range
-  * *Default value*: none
-
-
 * **onButtonShort**: Pointer to a callback function, which is call at detecting a short press of the switch.
-  * *Data type*: Handler
-  * *Default value*: none
-
-
 * **onButtonLong**: Pointer to a callback function, which is call at detecting a long press of the switch.
-  * *Data type*: Handler
-  * *Default value*: none
 
 #### Example
 ```cpp
