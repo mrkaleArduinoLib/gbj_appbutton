@@ -38,7 +38,7 @@
 class gbj_appbutton : gbj_appcore
 {
 public:
-  static const String VERSION;
+  const String VERSION = "GBJ_APPBUTTON 1.0.0";
 
   typedef void Handler();
 

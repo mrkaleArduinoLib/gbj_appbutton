@@ -1,5 +1,4 @@
 #include "gbj_appbutton.h"
-const String gbj_appbutton::VERSION = "GBJ_APPBUTTON 1.0.0";
 
 void gbj_appbutton::run()
 {
