@@ -1,12 +1,13 @@
 {
   "name": "gbj_appbutton",
-  "keywords": "application",
+  "version": "1.0.0",
   "description": "Library processes tactile or touch switch as a sensor.",
+  "keywords": "application",
   "repository": {
     "type": "git",
     "url": "https://github.com/mrkaleArduinoLib/gbj_appbutton.git"
   },
-  "version": "1.0.0",
+  "license": "MIT",
   "frameworks": "arduino",
   "platforms": [
     "atmelavr",
